@@ -1,23 +1,63 @@
 import React, { useState } from "react";
-import { auth } from "../Firebase";
+import { auth, database } from "../Firebase"; // Ensure you import Firebase database instance
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { ref, get, set, query, orderByChild, equalTo } from "firebase/database";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const [accountType, setAccountType] = useState("admin");
 
   const handleSignUp = async () => {
+    if (!username.trim()) {
+      alert("Please enter a username.");
+      return;
+    }
+
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      // Check if username already exists in users node
+      const usersRef = ref(database, "users");
+      const usernameQuery = query(usersRef, orderByChild("username"), equalTo(username));
+      const snapshot = await get(usernameQuery);
+
+      if (snapshot.exists()) {
+        alert("Username already taken. Please choose another one.");
+        return;
+      }
+
+      // Proceed with user signup
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const userId = userCredential.user.uid;
+
+      // Save user data to Firebase
+      const userData = {
+        username,
+        email,
+        accountType,
+      };
+      await set(ref(database, `users/${userId}`), userData);
+
       alert("User signed up successfully!");
+      setEmail("");
+      setPassword("");
+      setUsername("");
+      setAccountType("admin");
     } catch (error) {
       console.error("Error signing up:", error.message);
+      alert("Error signing up: " + error.message);
     }
   };
 
   return (
     <div>
       <h2>Sign Up</h2>
+      <input
+        type="text"
+        placeholder="Username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
       <input
         type="email"
         placeholder="Email"
@@ -30,6 +70,18 @@ const SignUp = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
+      <div>
+        <label>
+          Account Type:
+          <select
+            value={accountType}
+            onChange={(e) => setAccountType(e.target.value)}
+          >
+            <option value="admin">Admin</option>
+            <option value="staff">Staff</option>
+          </select>
+        </label>
+      </div>
       <button onClick={handleSignUp}>Sign Up</button>
     </div>
   );
