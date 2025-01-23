@@ -93,18 +93,21 @@ const UpdateQuantityComponent = () => {
   };
 
   return (
-    <div>
-      <h2>Update Item Quantity</h2>
 
+    <div className='bg'> 
+    <table border={0} width='100%'height='70px'>
+      <tr>
+        <td className='heading'>Update Item Quantity</td>
+        </tr></table>
       <div>
-        <label>Enter Item ID:</label>
-        <input
+        <label className="entID">Enter Item ID: </label>
+        <input className="itemBox"
           type="text"
           value={itemId}
           onChange={(e) => setItemId(e.target.value)}
           placeholder="Enter Item ID"
         />
-        <button onClick={fetchItemById}>Fetch Item</button>
+        <button className="fetchBtn" onClick={fetchItemById}>Fetch Item</button>
       </div>
 
       {error && <p style={{ color: "red" }}>{error}</p>}

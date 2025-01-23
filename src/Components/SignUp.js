@@ -50,21 +50,25 @@ const SignUp = () => {
   };
 
   return (
-    <div>
-      <h2>Sign Up</h2>
-      <input
+    <div className='bg'> 
+    <table border={0} width='100%'height='70px'>
+      <tr>
+        <td className='heading'>Sign Up</td>
+        </tr></table><center>
+        <div className="signupBox">
+      <input className="usName"
         type="text"
         placeholder="Username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
+      /><br></br>
+      <input className="mail"
         type="email"
         placeholder="Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
+      /><br></br>
+      <input className="psw"
         type="password"
         placeholder="Password"
         value={password}
@@ -72,8 +76,8 @@ const SignUp = () => {
       />
       <div>
         <label>
-          Account Type:
-          <select
+          Account Type: 
+          <select className="type"
             value={accountType}
             onChange={(e) => setAccountType(e.target.value)}
           >
@@ -82,7 +86,8 @@ const SignUp = () => {
           </select>
         </label>
       </div>
-      <button onClick={handleSignUp}>Sign Up</button>
+      <button className='signupBtn'onClick={handleSignUp}>Sign Up</button>
+    </div></center>
     </div>
   );
 };

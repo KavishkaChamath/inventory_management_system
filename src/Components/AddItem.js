@@ -81,65 +81,69 @@ const AddItem = () => {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "0 auto" }}>
-      <h2>Add Item</h2>
+    <div className='bg'> 
+    <table border={0} width='100%'height='70px'>
+      <tr>
+        <td className='heading'>Add Item</td>
+        </tr></table><center>
+      <div className="addItmBox">
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: "10px" }}>
           <label>
-            ID:
+            ID:<br></br>
             <input
               type="text"
               value={id}
               onChange={(e) => setId(e.target.value)}
-              style={{ width: "100%", padding: "8px" }}
+              style={{ width: "400px", padding: "8px" }}
               required
             />
           </label>
         </div>
         <div style={{ marginBottom: "10px" }}>
           <label>
-            Date:
+            Date:<br></br>
             <input
               type="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
-              style={{ width: "100%", padding: "8px" }}
+              style={{ width: "400px", padding: "8px" }}
               required
             />
           </label>
         </div>
         <div style={{ marginBottom: "10px" }}>
           <label>
-            Category:
+            Category:<br></br>
             <input
               type="text"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              style={{ width: "100%", padding: "8px" }}
+              style={{ width: "400px", padding: "8px" }}
               required
             />
           </label>
         </div>
         <div style={{ marginBottom: "10px" }}>
           <label>
-            Price:
+            Price:<br></br>
             <input
               type="number"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
-              style={{ width: "100%", padding: "8px" }}
+              style={{ width: "400px", padding: "8px" }}
               required
             />
           </label>
         </div>
         <div style={{ marginBottom: "10px" }}>
           <label>
-            Quantity:
+            Quantity:<br></br>
             <input
               type="number"
               value={quantity}
               onChange={(e) => setQuantity(e.target.value)}
-              style={{ width: "100%", padding: "8px" }}
+              style={{ width: "400px", padding: "8px" }}
               required
             />
           </label>
@@ -156,7 +160,7 @@ const AddItem = () => {
         >
           Add Item
         </button>
-      </form>
+      </form></div></center>
     </div>
   );
 };

@@ -91,9 +91,14 @@ const CategoryQuantityBarChart = () => {
   };
 
   return (
-    <div>
-      <h2>Item Quantity by Category</h2>
+      <div className='bg'> 
+    <table border={0} width='100%'height='70px'>
+      <tr>
+        <td className='heading'>Item Quantity by Category</td>
+        </tr></table><center>
+        <div className="chartBox">
       <Bar data={chartData} options={options} />
+    </div></center>
     </div>
   );
 };

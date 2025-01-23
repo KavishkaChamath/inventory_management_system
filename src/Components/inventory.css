@@ -1,0 +1,419 @@
+.bg{
+    justify-content: center;
+    height: 100vh;
+    /* background: url('./Images/img26.jpg') rgb(211, 211, 211) 50%  / cover no-repeat; */
+    background-size: 100vw 100vh; /* cover the entire viewport */
+    background-size: cover; /* add this to ensure the image is stretched to fit the full height */
+    width: auto; /* set width to 100% of viewport width */
+    height: 85vh; /* set height to 100% of viewport height */
+    flex-shrink: 0;
+    margin: 0; /* remove any margin */
+    padding: 0; /* remove any padding */
+    overflow: hidden; /* add this to prevent the page from becoming scrollable */
+    background-attachment: fixed;
+  background: url('./Images/bg.jpg') no-repeat center 30% fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* Add a whitish overlay */
+  background-color: rgba(0, 0, 0, 0.275);
+  background-blend-mode: lighten;
+}
+.bg2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: url('./Images/img26.jpg') rgb(211, 211, 211) 50%  / cover no-repeat; */
+    background-size: 100vw 100vh; /* cover the entire viewport */
+    background-size: cover; /* add this to ensure the image is stretched to fit the full height */
+    width: auto; /* set width to 100% of viewport width */
+    height: 85vh; /* set height to 100% of viewport height */
+    flex-shrink: 0;
+    margin: 0; /* remove any margin */
+    padding: 0; /* remove any padding */
+    overflow: hidden; /* add this to prevent the page from becoming scrollable */
+    background-attachment: fixed;
+  background: url('./Images/bg.jpg') no-repeat center 30% fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* Add a whitish overlay */
+  background-color: rgba(0, 0, 0, 0.275);
+  background-blend-mode: lighten;
+}
+
+.adminBtn{
+    margin: 0 10px; /* Add some space between the buttons */
+    padding: 20px; /* Increase padding to make the buttons larger */
+    font-size: 30px; /* Increase font size */
+    width: 25%;
+    /*max-width: 300px; /* Adjust the max-width as needed */
+    height: 50%;
+    max-height: 800px;
+    font-weight: 900;
+    border: none; /* Optional: remove the default button border */
+    border-radius: 20px; /* Optional: add rounded corners */
+    background: url('./Images/img2.png')  no-repeat center;
+    color: white; /* Optional: change the text color */
+    cursor: pointer; /* Optional: change cursor to pointer on hover */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-position: center;
+    background-size: 100%;
+}
+.adminBtn:hover{
+    background: url('./Images/img2.png')no-repeat center;
+    background-size: 120%;
+    background-position: center;
+  }
+
+  .staffBtn{
+    margin: 0 10px; /* Add some space between the buttons */
+    padding: 20px; /* Increase padding to make the buttons larger */
+    font-size: 30px; /* Increase font size */
+    width: 25%;
+    /*max-width: 300px; /* Adjust the max-width as needed */
+    height: 50%;
+    max-height: 800px;
+    font-weight: 900;
+    border: none; /* Optional: remove the default button border */
+    border-radius: 20px; /* Optional: add rounded corners */
+    background: url('./Images/img4.png')  no-repeat center 100%;
+    color: white; /* Optional: change the text color */
+    cursor: pointer; /* Optional: change cursor to pointer on hover */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-position: center;
+    background-size: 100%;
+}
+.staffBtn:hover{
+    background: url('./Images/img4.png')no-repeat center;
+    background-size: 120%;
+    background-position: center;
+  }
+
+.inputBox{
+    background-color: rgba(0, 0, 0, 0.503);
+    border-radius: 3ch;
+    border-color: rgb(0, 0, 0);
+    border-style: outset;
+    border-width: 0cm;
+    width: 400px;
+    height: 250px;
+}
+.inputBox2{
+    background-color: rgba(54, 32, 3, 0.503);
+    border-radius: 3ch;
+    border-color: rgb(0, 0, 0);
+    border-style: outset;
+    border-width: 0cm;
+    width: 400px;
+    height: 250px;
+}
+
+.loginBtn{
+ margin-top: 0.5cm;
+ margin-left: 3cm;
+ background-color: rgb(182, 182, 217);
+ width: 100px;
+ height: 30px;
+ border-radius: 2cap;
+ color: rgb(1, 0, 28);
+ font-style: italic;
+}
+.loginBtn:hover{
+    background-color: rgb(137, 220, 220); 
+}
+.loginTxt{
+    color: rgb(255, 255, 255);
+    font-style: italic;
+}
+
+.input{
+    background-color: rgba(232, 232, 232, 0.911);
+    text-align: center;
+    border-radius: 2ch;
+    height: 25px;
+    width: 250px;
+    color: rgb(3, 3, 56);
+}
+
+.allItm{
+    height: 100px;
+    margin-top: 8ch;
+    margin-right: 20ch;
+
+}
+.count{
+    height: 100px;
+}
+.upQuantity{
+    height: 100px;
+    margin-top: 15ch;
+    margin-right: 20ch;
+}
+
+.overall{
+    height: 100px;
+}
+
+.allItm, .count, .upQuantity, .overall{
+    width: 150px;
+    height: 150px;
+    border-radius: 2cap;
+    font-size:large;
+    font-style: italic;
+    color: rgb(103, 33, 33);
+    background-color: rgba(249, 236, 155, 0.568);
+    border-width: 0.6cap;
+    border-color: rgb(126, 102, 4);
+}
+.allItm:hover, .count:hover, .upQuantity:hover, .overall:hover{
+    background-color: rgba(224, 233, 149, 0.568);
+    border-color: rgb(46, 44, 2);
+}
+.signOut{
+    height: 40px;
+    background-color: rgb(182, 182, 217);
+    width: 100px;
+    border-radius: 2cap;
+    color: rgb(1, 0, 28);
+    font-style: italic;
+}
+.heading{
+    color: rgb(191, 232, 239);
+    font-size: 5ch;
+    font-weight: 500;
+    font-style: italic;
+}
+table{
+    background-color: rgba(48, 54, 54, 0.515);
+}
+
+.invenBox{
+    background-color: rgba(240, 248, 255, 0.804);
+    width: 70%;
+    margin-top: 1cm;
+    border-radius: 2ch;
+    padding-top: 2cap;
+    padding-bottom: 2cap;
+
+}
+
+.order{
+    margin-left: 4cap;
+}
+
+.dropDown{
+    border-radius: 1cap;
+    width: 100px;
+    text-align: center;
+    background-color: rgba(190, 235, 220, 0);
+    border-color: rgb(0, 30, 56);
+    
+}
+
+.inputPrice{
+    width: 120px;
+    background-color: rgba(190, 235, 220, 0);
+    border-color: rgba(0, 30, 56, 0.307);
+    text-align: right;
+}
+
+.maxPri{
+    margin-left: 3cap;
+}
+.minQua{
+    margin-top: 1cap;
+}
+
+.applyBtn{
+    margin-top: 2cap;
+    width: 200px;
+    height: 30px;
+    border-radius: 1cap;
+    border-color: rgba(240, 248, 255, 0);
+    background-color: rgba(128, 144, 192, 0.647);
+}
+.applyBtn:hover{
+    background-color: rgba(186, 194, 218, 0.647);
+}
+.uls{
+    margin-left: 1cap;
+}
+
+.getTot{
+    background-color: rgba(0, 30, 255, 0.599);
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    border-color: rgba(240, 248, 255, 0);
+
+}
+.getTotPrice{
+    background-color: rgba(30, 123, 2, 0.667);
+    margin-left: 20px;
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    border-color: rgba(240, 248, 255, 0);
+    
+}
+
+.getTot:hover{
+    background-color: rgb(0, 30, 255);
+}
+.getTotPrice:hover{
+    background-color: rgb(31, 123, 2);
+}
+
+.itemBox{
+    width: 200px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.entID{
+    font-weight: 500;
+
+}
+
+.fetchBtn{
+    background-color: rgba(193, 195, 219, 0.671);
+    width: 100px;
+    height: 25px;
+    border-radius: 20px;
+}
+.fetchBtn:hover{
+    background-color: rgb(193, 195, 219);
+}
+
+.chartBox{
+    background-color: rgba(240, 248, 255, 0.799);
+    width: 90%;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    max-height: 400px;
+
+}
+.addUser, .addItm, .delItm, .shAll ,.couItm, .upQua, .itOve, .uplData, .bacData{
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 33, 61, 0.522);
+    color: white;
+    border-radius: 10px;
+    font-size: 17px;
+    font-style: italic;
+}
+.addUser:hover, .addItm:hover, .delItm:hover, .shAll:hover ,.couItm:hover, .upQua:hover, .itOve:hover, .uplData:hover, .bacData:hover{
+
+    background-color: rgba(0, 33, 61, 0.745);
+
+}
+
+.addItm{
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.couItm{
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.uplData{
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.usName, .psw, .mail{
+    width: 250px;
+    height: 25px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+    background-color: rgba(234, 234, 234, 0.632);
+
+}
+.usName{
+    margin-top: 20px;
+}
+
+.type{
+    margin-left: 10px;
+    width: 80px;
+    text-align: center;
+    border-radius: 10px;
+    background-color:rgba(234, 234, 234, 0.632);
+}
+.signupBtn{
+    width: 100px;
+    margin-top: 10px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: rgba(30, 95, 218, 0.882);
+    color: white;
+}
+.signupBtn:hover{
+    background-color: rgba(30, 96, 218, 0.577);
+}
+
+.signupBox{
+    background-color: rgba(205, 225, 242, 0.641);
+    width: 70%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.addItmBox{
+    background-color: rgba(205, 225, 242, 0.641);
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+.delItmBox{
+    background-color: rgba(205, 225, 242, 0.641);
+    width: 500px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+.entId{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.uploadBox{
+    background-color: rgba(205, 225, 242, 0.641);
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.itemTbl{
+    width: 50%;
+    background-color: rgba(240, 248, 255, 0);
+    
+}

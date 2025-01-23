@@ -42,18 +42,22 @@ export default function AdminHome() {
       };
 
   return (
-    <div>AdminHome
-        <SignOut/>
-        <button onClick={() => pageChanger('/comp/Signup')}>Add new user</button>
-        <button onClick={() => pageChanger('/comp/AddItem')}>Add new item</button>
-        <button onClick={() => pageChanger('/comp/DeleteItem')}>Delete Item</button>
-        <button onClick={() => pageChanger('/comp/Display')}>Show all items</button>
-        <button onClick={() => pageChanger('/comp/GetCount')}>Count items</button>
-        <button onClick={() => pageChanger('/comp/updateCount')}>Update Quantity</button>
-        <button onClick={() => pageChanger('/comp/showChart')}>Item Overall</button>
+    <div className='bg'> 
+    <table border={0} width='100%'height='70px'>
+      <tr>
+        <td className='heading'>Admin Home</td>
+        <td width='150px'><SignOut/></td>
+        </tr></table>
+        <button className='addUser'onClick={() => pageChanger('/comp/Signup')}>Add new user</button>
+        <button className='addItm'onClick={() => pageChanger('/comp/AddItem')}>Add new item</button>
+        <button className='delItm'onClick={() => pageChanger('/comp/DeleteItem')}>Delete Item</button><br></br>
+        <button className='shAll'onClick={() => pageChanger('/comp/Display')}>Show all items</button>
+        <button className='couItm'onClick={() => pageChanger('/comp/GetCount')}>Count items</button>
+        <button className='upQua'onClick={() => pageChanger('/comp/updateCount')}>Update Quantity</button><br></br>
+        <button className='itOve'onClick={() => pageChanger('/comp/showChart')}>Item Overall</button>
 
-        <button onClick={() => pageChanger('/comp/uploadData')}>Upload Data to Database</button>
-        <button onClick={handleDownload}> BackUp Items Data </button>
+        <button className='uplData'onClick={() => pageChanger('/comp/uploadData')}>Upload Data to Database</button>
+        <button className='bacData'onClick={handleDownload}> BackUp Items Data </button>
     </div>
   )
 }

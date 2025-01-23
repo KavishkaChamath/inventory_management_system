@@ -41,21 +41,23 @@ import React, { useState } from "react";
     };
   
     return (
-      <div>
-        <h2>Login</h2>
-        <input
+      <div className="bg2">
+      <div className="inputBox2">
+      <h2 className="loginTxt">Staff Login</h2>
+        <input className="input"
           type="text"
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
+        /> <br></br><br></br>
+        <input className="input"
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-        />
-        <button onClick={handleLogin}>Login</button>
+        /> <br></br>
+        <button className='loginBtn'onClick={handleLogin}>Login</button>
+      </div>
       </div>
     );
   };

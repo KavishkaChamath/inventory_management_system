@@ -64,8 +64,12 @@ const UploadAndStoreData = () => {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "0 auto", textAlign: "center" }}>
-      <h2>Upload JSON File</h2>
+      <div className='bg'> 
+    <table border={0} width='100%'height='70px'>
+      <tr>
+        <td className='heading'>Upload JSON File</td>
+        </tr></table><center>
+        <div className="uploadBox">
       <input
         type="file"
         accept=".json"
@@ -91,8 +95,8 @@ const UploadAndStoreData = () => {
       <pre >
         <code>{JSON.stringify(jsonData, null, 2)}</code>
       </pre>
-
-    </div>
+      </div>
+    </div></center>
     </div>
   );
 };

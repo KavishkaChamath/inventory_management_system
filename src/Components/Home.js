@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import './inventory.css'
 
 
 
@@ -9,10 +10,11 @@ export default function Home() {
     const pageChanger = (path) => navigate(path);
 
   return (
-    <div>
-        <button onClick={() => pageChanger('/comp/Admin')}>Admin</button>
-        <button onClick={() => pageChanger('/comp/Staff')}>Staff</button>
-        
+    <div className='bg2'>
+
+        <button className='adminBtn'onClick={() => pageChanger('/comp/Admin')}>Admin</button>
+        <button className='staffBtn'onClick={() => pageChanger('/comp/Staff')}>Staff</button>
+
 
     </div>
   )

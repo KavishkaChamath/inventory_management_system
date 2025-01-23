@@ -56,19 +56,21 @@ const DeleteCategoryComponent = () => {
   };
 
   return (
-    <div>
-      <h2>Delete Category from Item</h2>
-
-      <div>
-        <label>Enter Item ID:</label>
-        <input
+      <div className='bg'> 
+    <table border={0} width='100%'height='70px'>
+      <tr>
+        <td className='heading'>Delete Category from Item</td>
+        </tr></table><center>
+      <div className="delItmBox">
+        <label>Enter Item ID:</label><br></br>
+        <input className="entId"
           type="text"
           value={itemId}
           onChange={(e) => setItemId(e.target.value)}
           placeholder="Enter Item ID"
-        />
-        <button onClick={fetchItemById}>Fetch Item</button>
-      </div>
+        /><br></br>
+        <button className='fetchBtn'onClick={fetchItemById}>Fetch Item</button>
+      </div></center>
 
       {error && <p style={{ color: "red" }}>{error}</p>}
       {successMessage && <p style={{ color: "green" }}>{successMessage}</p>}

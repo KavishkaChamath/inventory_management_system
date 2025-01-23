@@ -132,19 +132,24 @@ const filterItems = () => {
   
 
   return (
-    <div>
-      <h2>Inventory Management</h2>
 
+    <div className='bg'> 
+    <table border={0} width='100%'height='70px'>
+      <tr>
+        <td className='heading'>Inventory Management</td>
+        </tr></table>
+      <center>
+      <div className="invenBox">
       <div>
-        <label>Sort By:</label>
-        <select value={sortField} onChange={(e) => setSortField(e.target.value)}>
+        <label>Sort By: </label>
+        <select className="dropDown"value={sortField} onChange={(e) => setSortField(e.target.value)}>
           <option value="price">Price</option>
           <option value="quantity">Quantity</option>
           <option value="category">Category</option>
         </select>
 
-        <label>Order:</label>
-        <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
+        <label className="order"> Order: </label>
+        <select className="dropDown"value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
           <option value="ascending">Ascending</option>
           <option value="descending">Descending</option>
         </select>
@@ -155,16 +160,16 @@ const filterItems = () => {
           <h3>Filter Items</h3>
 
           <div>
-            <label>Min Price:</label>
-            <input
+            <label>Min Price: </label>
+            <input className="inputPrice"
               type="number"
               name="minPrice"
               value={minPrice}
               onChange={handlePriceRangeChange}
             />
 
-            <label>Max Price:</label>
-            <input
+            <label className="maxPri">Max Price: </label>
+            <input className="inputPrice"
               type="number"
               name="maxPrice"
               value={maxPrice}
@@ -172,30 +177,32 @@ const filterItems = () => {
             />
           </div>
 
-          <div>
-            <label>Min Quantity:</label>
-            <input
+          <div className="minQua">
+            <label >Min Quantity: </label>
+            <input className="inputPrice"
               type="number"
               value={minQuantity}
               onChange={handleMinQuantityChange}
             />
           </div>
 
-          <button onClick={filterItems}>Apply Filters</button>
+          <button className="applyBtn" onClick={filterItems}>Apply Filters</button>
         </div>
+        </div></center>
 
-
-      <h3>Items</h3>
-      <ul>
+    <div className="sorted">
+      <h3>Items</h3>        
+      <ul className="uls">
         {sortedItems.map((item, index) => (
-          <li key={index}>
-            <strong>ID:</strong> {item.id}, <strong>Category:</strong>{" "}
-            {item.category}, <strong>Price:</strong> {item.price},{" "}
-            <strong>Quantity:</strong> {item.quantity},{" "}
+          <center><table border={1} className="itemTbl"><th><td><li key={index}>
+            <strong>ID:</strong> {item.id} &nbsp;&nbsp;&nbsp;&nbsp;<strong>Category:</strong>{" "}
+            {item.category} &nbsp;&nbsp;&nbsp;&nbsp; <strong>Price:</strong> {item.price} &nbsp;&nbsp;&nbsp;&nbsp;{" "}
+            <strong>Quantity:</strong> {item.quantity}  &nbsp;&nbsp;&nbsp;&nbsp;{" "}
             <strong>Date:</strong> {item.date}
-          </li>
+            </li></td></th></table></center>
         ))}
-      </ul>
+      </ul> 
+       </div>   
 
 
     </div>

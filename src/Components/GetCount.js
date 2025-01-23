@@ -80,47 +80,36 @@ const CountItemsByCategory = () => {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "0 auto" }}>
-      <h2>Total Quantity and Price</h2>
+      <div className='bg'> 
+    <table border={0} width='100%'height='70px'>
+      <tr>
+        <td className='heading'>Total Quantity and Price</td>
+        </tr></table>
 
       {/* Input for category ID or name */}
-      <div style={{ marginBottom: "10px" }}>
+      <div style={{ marginBottom: "10px" , marginTop:'30px'}}>
         <label>
-          Category ID :
-          <input
+          <h3>Category ID :</h3>
+          <input className="catID"
             type="text"
             value={categoryId}
             onChange={(e) => setCategoryId(e.target.value)}
-            style={{ width: "100%", padding: "8px" }}
+            style={{ width: "50%", padding: "8px" }}
             placeholder="Enter Category ID"
           />
         </label>
       </div>
 
       {/* Buttons */}
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <button
+      <div>
+        <button className="getTot"
           onClick={handleGetTotalQuantity}
-          style={{
-            padding: "10px 20px",
-            backgroundColor: "#007bff",
-            color: "#fff",
-            border: "none",
-            cursor: "pointer",
-          }}
         >
           Get Total Quantity
         </button>
 
-        <button
+        <button className="getTotPrice"
           onClick={handleGetTotalPrice}
-          style={{
-            padding: "10px 20px",
-            backgroundColor: "#28a745",
-            color: "#fff",
-            border: "none",
-            cursor: "pointer",
-          }}
         >
           Get Total Price
         </button>

@@ -18,9 +18,10 @@ const SignOut = () => {
   };
 
   return (
-    <button onClick={handleSignOut} style={{ padding: "10px 20px", cursor: "pointer" }}>
+    <div>
+    <button className="signOut" onClick={handleSignOut} style={{ padding: "10px 20px", cursor: "pointer" }}>
       Sign Out
-    </button>
+    </button></div>
   );
 };
 

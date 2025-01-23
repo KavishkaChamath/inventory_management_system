@@ -28,7 +28,7 @@ const pageHandle = () => navigate('/comp/AdminHome');
         
         const email = userEntry.email; // Get the email linked to the username
 
-        if(userEntry.accountType=='Admin'){
+        if(userEntry.accountType=='admin'){
           // Use email and password to sign in
           await signInWithEmailAndPassword(auth, email, password);
           pageHandle();
@@ -49,21 +49,23 @@ const pageHandle = () => navigate('/comp/AdminHome');
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <input
+    <div className="bg2">
+      <div className="inputBox">
+      <h2 className="loginTxt">Admin Login</h2>
+      <input className="input"
         type="text"
         placeholder="Username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
+      /><br></br><br></br>
+      <input className="input"
         type="password"
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleLogin}>Login</button>
+      /><br></br>
+      <button className='loginBtn'onClick={handleLogin}>Login</button>
+    </div>
     </div>
   );
 };
